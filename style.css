@@ -1,0 +1,100 @@
+:root {
+  --color-white: #ffffff;
+  --color-green: #00ff66;
+  --color-red: #ff4444;
+  --color-hover: #00cc66;
+  --color-navbar-bg: rgba(0, 0, 0, 0.7);
+  --height-navbar: 85px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--color-white);
+}
+
+
+.bg-background {
+  background-image: url("img/1.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+
+.nav-bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: var(--height-navbar);
+  background-color: var(--color-navbar-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1;
+}
+
+
+.logo-img {
+  height: 50px;
+  object-fit: contain;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu li {
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.menu li:hover {
+  color: var(--color-hover);
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-buttons button {
+  background: transparent;
+  border: none;
+  border-top: 2px solid;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s;
+}
+
+.btn-login {
+  border-color: var(--color-green);
+}
+
+.btn-register {
+  border-color: var(--color-red);
+}
+
+.btn-login:hover {
+  background-color: var(--color-green);
+  color: black;
+}
+
+.btn-register:hover {
+  background-color: var(--color-red);
+color: black;
+}
