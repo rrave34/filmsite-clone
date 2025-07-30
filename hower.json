@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "fa-heart",
+    "title": "Beğendim",
+    "description": "Yaygın inanışın tersine, Lorem Ipsum rastgele sözcüklerden oluşmaz...",
+    "class": "card-1"
+  },
+  {
+    "icon": "fa-eye",
+    "title": "İzledim",
+    "description": "Yaygın inanışın tersine, Lorem Ipsum rastgele sözcüklerden oluşmaz...",
+    "class": "card-2"
+  },
+  {
+    "icon": "fa-plus",
+    "title": "Daha Sonra İzle",
+    "description": "Yaygın inanışın tersine, Lorem Ipsum rastgele sözcüklerden oluşmaz...",
+    "class": "card-3"
+  },
+  {
+    "icon": "fa-comment",
+    "title": "Yorumla",
+    "description": "Yaygın inancın tersine, Lorem Ipsum rastgele sözcüklerden oluşmaz...",
+    "class": "card-4"
+  }
+]

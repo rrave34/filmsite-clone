@@ -163,10 +163,10 @@ body {
     padding: 50px 100px;
     background-color: #0d1b2a;
     color: white;
-    text-align: center;
     border-radius: 10px;
-    margin: 60px auto;
-    max-width: 1200px;
+    
+    max-width: 2559px;
+    max-height: 3200px;
 }
 
 .how-it-works h2 {
@@ -183,17 +183,20 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    width: 1254px;
+    height: 302px;
+    margin-left: 10%;
 }
 
 .how-card {
     flex: 1;
-    background-color: #1a1a2e;
+    background-color: #0d1b2a;
     padding: 20px;
     border-radius: 10px;
     transition: all 0.3s ease;
-    cursor: pointer;
     text-align: center;
     color: #ccc;
+    border: 2px solid rgb(133, 133, 133); 
 }
 
 .how-card .icon i {
@@ -202,12 +205,22 @@ body {
     transition: color 0.3s ease;
     margin-bottom: 15px;
 }
-
-.how-card:hover .icon i {
-    color: #ff4d4d; 
+.card-1:hover .icon i {
+    color: #ff0000; 
 }
 
-.how-car
+.card-2:hover .icon i {
+    color: #009baf; 
+}
+
+.card-3:hover .icon i {
+    color: #d17701; 
+}
+.card-4:hover .icon i {
+    color: #ffffff; 
+}
+
+
 
 .how-card:hover {
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
