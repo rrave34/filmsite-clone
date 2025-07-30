@@ -1,0 +1,38 @@
+[
+  {
+    "title": "The Lord of the Rings",
+    "description": "The Fellowship of the Ring",
+    "image": "img/lordofstheking.jpg",
+    "class": "card-1"
+  },
+  {
+    "title": "Matrix Revolutions",
+    "description": "Neo'nun son savaşı",
+    "image": "img/matrix.jpg",
+    "class": "card-2"
+  },
+  {
+    "title": "The Revenant",
+    "description": "İntikam için hayatta kalış",
+    "image": "img/therevenant.jpg",
+    "class": "card-3"
+  },
+  {
+    "title": "Interstellar",
+    "description": "Zaman ve uzay arasında",
+    "image": "img/theinterstellar.jpg",
+    "class": "card-4"
+  },
+  {
+    "title": "The Pianist",
+    "description": "Bir müzisyenin hayatta kalma öyküsü",
+    "image": "img/thepianist.jpg",
+    "class": "card-1"
+  },
+  {
+    "title": "American History X",
+    "description": "Geçmişle yüzleşme",
+    "image": "img/americanhistory.jpg",
+    "class": "card-2"
+  }
+]

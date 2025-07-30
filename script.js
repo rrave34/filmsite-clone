@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Menü verisini yükle
+  
     fetch('menu.json')
         .then(res => res.json())
         .then(navItems => {
@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Menü yüklenemedi:", error);
         });
 
-    // How-card verisini yükle
     fetch('hower.json')
         .then(res => res.json())
         .then(howItems => {
@@ -36,5 +35,34 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => {
             console.error("How kartları yüklenemedi:", error);
+        });
+
+   
+    fetch('filmafis.json')
+        .then(res => res.json())
+        .then(filmItems => {
+            const filmContainer = document.createElement("div");
+            filmContainer.className = "how-cards"; 
+
+            filmItems.forEach(item => {
+                const card = document.createElement("div");
+                card.className = `how-card ${item.class}`;
+                card.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}">
+                    <div class="card-overlay">
+                        <i class="fas fa-eye"></i>
+                        <span>${item.views} izlenme</span>
+                    </div>
+                    <h3>${item.title}</h3>
+                    <p>${item.description}</p>
+                `;
+                filmContainer.appendChild(card);
+            });
+
+           
+            document.getElementById("content").appendChild(filmContainer);
+        })
+        .catch(error => {
+            console.error("Film afişleri yüklenemedi:", error);
         });
 });
