@@ -1,29 +1,32 @@
-{
-    "menu": [
-        {
-            "name": "filmler"
-        },
-        {
-            "name": "diziler"
-        },
-        {
-            "name": "yorumlar"
-        },
-        {
-            "name": "listeler"
-        },
-        {
-            "name": "türler"
-        },
-        {
-            "name": "giriş yap"
-        },
-        {
-            "name": "kaydol"
-        }
-    ],
-    "buttons": {
-        "login": "Giriş Yap",
-        "register": "Kayıt ol"
+[
+    {
+        "name": "filmler",
+        "link": "#"
+    },
+    {
+        "name": "diziler",
+        "link": "#"
+    },
+    {
+        "name": "yorumlar",
+        "link": "#"
+    },
+    {
+        "name": "listeler",
+        "link": "#"
+    },
+    {
+        "name": "türler",
+        "link": "nav links a"
+    },
+    {
+        "name": "giriş yap",
+        "link": "#",
+        "class": "login"
+    },
+    {
+        "name": "kaydol",
+        "link": "#",
+        "class": "register"
     }
-}
+]
