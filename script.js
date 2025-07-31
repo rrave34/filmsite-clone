@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("How kartları yüklenemedi:", error);
         });
 
-   
     fetch('filmafis.json')
         .then(res => res.json())
         .then(filmItems => {
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <img src="${item.image}" alt="${item.title}">
                     <div class="card-overlay">
                         <i class="fas fa-eye"></i>
-                        <span>${item.views} izlenme</span>
+                        <span>${item.views || 0} izlenme</span>
                     </div>
                     <h3>${item.title}</h3>
                     <p>${item.description}</p>
@@ -59,8 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 filmContainer.appendChild(card);
             });
 
-           
-            document.getElementById("content").appendChild(filmContainer);
+         
+           document.getElementById("filmafis")
         })
         .catch(error => {
             console.error("Film afişleri yüklenemedi:", error);
