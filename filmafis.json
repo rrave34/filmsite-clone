@@ -1,38 +1,38 @@
 [
   {
     "title": "The Lord of the Rings",
-    "description": "The Fellowship of the Ring",
     "image": "img/lordofstheking.jpg",
-    "class": "card-1"
+    "description": "Orta Dünya'da geçen destansı bir macera.",
+    "views": 45872
   },
   {
     "title": "Matrix Revolutions",
-    "description": "Neo'nun son savaşı",
     "image": "img/matrix.jpg",
-    "class": "card-2"
+    "description": "Gerçeklik ve sanal dünya arasındaki savaş.",
+    "views": 37456
   },
   {
     "title": "The Revenant",
-    "description": "İntikam için hayatta kalış",
     "image": "img/therevenant.jpg",
-    "class": "card-3"
+    "description": "Hayatta kalma mücadelesi ve intikam hikayesi.",
+    "views": 22678
   },
   {
     "title": "Interstellar",
-    "description": "Zaman ve uzay arasında",
     "image": "img/theinterstellar.jpg",
-    "class": "card-4"
+    "description": "Zaman ve uzay arasında bir yolculuk.",
+    "views": 51924
   },
   {
-    "title": "The Pianist",
-    "description": "Bir müzisyenin hayatta kalma öyküsü",
+    
     "image": "img/thepianist.jpg",
-    "class": "card-1"
+    "description": "Savaşın ortasında bir müzisyenin dramı.",
+    "views": 18890
   },
   {
     "title": "American History X",
-    "description": "Geçmişle yüzleşme",
     "image": "img/americanhistory.jpg",
-    "class": "card-2"
+    "description": "Irkçılık ve kurtuluş üzerine çarpıcı bir film.",
+    "views": 31115
   }
 ]

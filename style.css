@@ -34,6 +34,7 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     top: 0;
     z-index: 0;
+    
 
 }
 
@@ -48,6 +49,16 @@ body {
     gap: 20px;
     color: var(--color-bg);
     margin-left: 75px;
+}
+.nav-links li :after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--color-bg);
+    transition: width 0.2s ease;
 }
 
 .nav-links li a {
@@ -73,7 +84,7 @@ body {
 .navbar ul li a {
     color: white !important;
     text-decoration: none;
-    padding: 10px;
+    padding: 0px;
     position: relative;
     transition: all 0.3s ease;
 }
@@ -182,7 +193,8 @@ body {
     gap: 20px;
     width: 1254px;
     height: 302px;
-    margin-left: 10%;
+    margin-left: 15%;
+    margin-top: 80px;
 }
 
 .how-card {
@@ -221,10 +233,7 @@ body {
 
 
 
-.how-card:hover {
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
-}
+
 
 .how-card h3 {
     color: white;
@@ -287,20 +296,15 @@ body {
     border-radius: 6px;
 }
 
-
-.film section{
-    padding: 60px 100px;
+.film-section {
+    padding: 50px 100px;
     background-color: #0d1b2a;
-    margin-top: 50px;
+    margin-top: 60px;
+    border-top: 2px solid #0d1b2a;
+    color: white;
     
 }
 
-
-.film-title {
-  font-size: 28px;
-  margin-bottom: 30px;
-  border-bottom: 2px solid white;
-display: inline-block;
-padding-bottom: 10px;
+.how-card img{
+   height:-30px ;
 }
-
