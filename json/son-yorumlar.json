@@ -1,0 +1,22 @@
+[
+  {
+    "user": "user",
+    "movieTitle": "Lord of the Rings",
+    "commentText": "Lorem ipsum is simply dummy text of the printing and typesetting industry."
+  },
+  {
+    "user": "user",
+    "movieTitle": "The Pianist",
+    "commentText": "Lorem ipsum is simply dummy text of the printing and typesetting industry."
+  },
+  {
+    "user": "user",
+    "movieTitle": "Interstellar",
+    "commentText": "Lorem ipsum is simply dummy text of the printing and typesetting industry."
+  },
+  {
+    "user": "user",
+    "movieTitle": "American History",
+    "commentText": "Lorem ipsum is simply dummy text of the printing and typesetting industry."
+  }
+]

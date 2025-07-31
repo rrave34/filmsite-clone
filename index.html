@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>listeraf</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>listeraf</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="img/logo.png" alt="Site Logosu">
-      </div>
-      <ul class="nav-links" id="nav-menu"></ul>
-    </nav>
-  </header>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/logo.png" alt="Site Logosu">
+            </div>
+            <ul class="nav-links" id="nav-menu"></ul>
+        </nav>
+    </header>
 
-  <main id="content">
-    <section class="hero"></section>
-    <div class="how-cards" id="how-cards"></div>
-  </main>
+    <main id="content">
+        <section class="hero"></section>
 
- 
-  <section class="film-section" id="film-section">
-    <h2 class="film-title"> En Çok İzlenenler</h2>
-    <div class="how-cards" id="film-cards"></div>
-  </section>
+        <section class="film-section">
+            <h2 class="film-title">Nasıl Çalışır? </h2>
+            <div class="how-cards" id="how-cards">
+            </div>
+        </section>
+    </main>
+
+    <section class="film-section" id="most-watched-section">
+        <h2 class="film-title">En Çok İzlenenler</h2>
+        <div class="how-cards" id="film-cards">
+        </div>
+    </section>
+
+    <section class="film-section" id="latest-added-section">
+        <h2 class="film-title">Son Eklenen Film</h2>
+        <div class="how-cards2" id="film-cards2">
+        </div>
+    </section>
+
+       <section class="film-section" id="popular-members-section">
+        <h2 class="film-title">Popüler Üyeler</h2>
+        <div class="members-container" id="members-container">
+        </div>
+    </section>
 
 
-  <script src="script.js"></script>
+    <section class="suggestion-comments-section">
+        <div class="grid-container">
+            <div class="random-suggestion-column" id="random-movie-container"></div>
+            <div class="recent-comments-column" id="recent-comments-container"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
