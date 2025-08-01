@@ -3,9 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchData = async (url, errorHandler) => {
         try {
             const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`HTTP hatası! Durum: ${response.status} - Dosya: ${url}`);
-            }
+            if (!response.ok) throw new Error(`HTTP hatası! Durum: ${response.status} - Dosya: ${url}`);
             return await response.json();
         } catch (error) {
             errorHandler(error);
@@ -89,15 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!container || !comments) return;
         let commentsHtml = '<h2>Son Yorumlar</h2><div class="comments-list">';
         comments.forEach(comment => {
-            commentsHtml += `
-                <div class="comment-item">
-                    <div class="comment-header">
-                        <span class="comment-user">${comment.username}</span>
-                        <span class="comment-movie-title">${comment.movieTitle}</span>
-                    </div>
-                    <p class="comment-body">${comment.comment}</p>
-                </div>
-            `;
+            commentsHtml += `<div class="comment-item"><div class="comment-header"><span class="comment-user">${comment.username}</span><span class="comment-movie-title">${comment.movieTitle}</span></div><p class="comment-body">${comment.comment}</p></div>`;
         });
         commentsHtml += '</div>';
         container.innerHTML = commentsHtml;
@@ -116,8 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const initApp = async () => {
-        handleHeaderScroll();
-        
         const menuItems = await fetchData('json/menu.json', e => console.error("Menü Yüklenemedi:", e));
         createMenu(menuItems);
 
@@ -138,6 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const latestComments = await fetchData('json/son-yorumlar.json', e => console.error("Son Yorumlar Yüklenemedi:", e));
         createLatestComments(latestComments);
+
+        handleHeaderScroll();
     };
 
     initApp();
