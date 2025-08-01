@@ -1,22 +1,21 @@
 [
   {
-    "user": "user",
+    "username": "user",
     "movieTitle": "Lord of the Rings",
-    "commentText": "Lorem ipsum is simply dummy text of the printing and typesetting industry."
+    "comment": "Lorem ipsum is simply dummy text of the printing and typesetting industry."
+},
+{"username": "user",
+    "movieTitle": "The Matrix",
+    "comment": "Lorem ipsum is simply dummy text of the printing and typesetting industry."
   },
   {
-    "user": "user",
-    "movieTitle": "The Pianist",
-    "commentText": "Lorem ipsum is simply dummy text of the printing and typesetting industry."
-  },
-  {
-    "user": "user",
+    "username": "user",
     "movieTitle": "Interstellar",
-    "commentText": "Lorem ipsum is simply dummy text of the printing and typesetting industry."
+    "comment": "Lorem ipsum is simply dummy text of the printing and typesetting industry."
   },
   {
-    "user": "user",
-    "movieTitle": "American History",
-    "commentText": "Lorem ipsum is simply dummy text of the printing and typesetting industry."
+    "username": "user",
+    "movieTitle": "The Pianist",
+    "comment": "Lorem ipsum is simply dummy text of the printing and typesetting industry."
   }
 ]

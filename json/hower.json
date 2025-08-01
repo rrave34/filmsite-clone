@@ -1,26 +1,22 @@
 [
   {
-    "icon": "fa-heart",
+    "icon": "bi bi-heart-fill",
     "title": "Beğendim",
-    "description": "Yaygın inanışın tersine, Lorem Ipsum rastgele sözcüklerden oluşmaz...",
-    "class": "card-1"
+    "description": "Yaygın inancın tersine, Lorem Ipsum rastgele sözcüklerden oluşmaz. Kökleri M.Ö. 45 tarihinden bu yana klasik Latin edebiyatına uzanır."
   },
   {
-    "icon": "fa-eye",
+    "icon": "bi bi-eye-fill",
     "title": "İzledim",
-    "description": "Yaygın inanışın tersine, Lorem Ipsum rastgele sözcüklerden oluşmaz...",
-    "class": "card-2"
+    "description": "Yaygın inancın tersine, Lorem Ipsum rastgele sözcüklerden oluşmaz. Kökleri M.Ö. 45 tarihinden bu yana klasik Latin edebiyatına uzanır."
   },
   {
-    "icon": "fa-plus",
+    "icon": "bi bi-plus-lg",
     "title": "Daha Sonra İzle",
-    "description": "Yaygın inanışın tersine, Lorem Ipsum rastgele sözcüklerden oluşmaz...",
-    "class": "card-3"
+    "description": "Yaygın inancın tersine, Lorem Ipsum rastgele sözcüklerden oluşmaz. Kökleri M.Ö. 45 tarihinden bu yana klasik Latin edebiyatına uzanır."
   },
   {
-    "icon": "fa-comment",
+    "icon": "bi bi-chat-dots-fill",
     "title": "Yorumla",
-    "description": "Yaygın inancın tersine, Lorem Ipsum rastgele sözcüklerden oluşmaz...",
-    "class": "card-4"
+    "description": "Yaygın inancın tersine, Lorem Ipsum rastgele sözcüklerden oluşmaz. Kökleri M.Ö. 45 tarihinden bu yana klasik Latin edebiyatına uzanır."
   }
 ]

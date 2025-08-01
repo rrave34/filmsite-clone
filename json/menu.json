@@ -1,32 +1,6 @@
 [
-    {
-        "name": "filmler",
-        "link": "#"
-    },
-    {
-        "name": "diziler",
-        "link": "#"
-    },
-    {
-        "name": "yorumlar",
-        "link": "#"
-    },
-    {
-        "name": "listeler",
-        "link": "#"
-    },
-    {
-        "name": "türler",
-        "link": "nav links a"
-    },
-    {
-        "name": "giriş yap",
-        "link": "#",
-        "class": "login"
-    },
-    {
-        "name": "kaydol",
-        "link": "#",
-        "class": "register"
-    }
+  { "text": "filmler", "url": "#filmler" },
+  { "text": "diziler", "url": "#diziler" },
+  { "text": "yorumlar", "url": "#yorumlar" },
+  { "text": "listeler", "url": "#listeler" }
 ]

@@ -1,132 +1,144 @@
-document.addEventListener("DOMContentLoaded", () => {
-    fetch("json/menu.json")
-        .then(res => res.json())
-        .then(navItems => {
-            const navMenu = document.getElementById("nav-menu");
-            navItems.forEach(item => {
-                const li = document.createElement("li");
-                const a = document.createElement("a");
-                a.href = item.link;
-                a.textContent = item.name;
-                if (item.class) a.classList.add(item.class);
-                li.appendChild(a);
-                navMenu.appendChild(li);
-            });
-        });
+document.addEventListener('DOMContentLoaded', () => {
 
-    fetch("json/hower.json")
-        .then(res => res.json())
-        .then(howItems => {
-            const howContainer = document.getElementById("how-cards");
-            howItems.forEach(item => {
-                const card = document.createElement("div");
-                card.className = `how-card with-border ${item.class || ""}`;
-                card.innerHTML = `
-                  <div class="icon"><i class="fas ${item.icon}"></i></div>
-                  <h3>${item.title}</h3>
-                  <p>${item.description}</p>
-                `;
-                howContainer.appendChild(card);
-            });
-        });
-    
-    fetch("json/populer-uyeler.json")
-        .then(res => res.json())
-        .then(members => {
-            const container = document.getElementById("members-container");
-            if (container) {
-                members.forEach(member => {
-                    const card = document.createElement("div");
-                    card.className = "member-card";
-                    card.innerHTML = `
-                        <div class="member-avatar-wrapper">
-                            <img src="${member.avatar}" alt="${member.username} avatar">
-                        </div>
-                        <h3 class="member-username">${member.username}</h3>  
-                        <p class="member-stat">Puan: ${member.puan}</p>
-                        <p class="member-stat">${member.izledi} izledi</p>
-                        <p class="member-stat">${member.yorumladı} yorumladı</p>
-                    `;
-                    container.appendChild(card);  //Oluşturlan kartı kapsayıcının içine ekler.
-                });
+    const fetchData = async (url, errorHandler) => {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP hatası! Durum: ${response.status} - Dosya: ${url}`);
             }
-        })
-        .catch(error => console.error('Popüler üyeler yüklenirken hata:', error));
+            return await response.json();
+        } catch (error) {
+            errorHandler(error);
+            return null;
+        }
+    };
 
-    fetch("json/filmafis.json")
-        .then(res => res.json())
-        .then(filmItems => {
-            const filmContainer = document.getElementById("film-cards");
-            filmItems.forEach(item => {
-                const card = document.createElement("div");
-                card.className = `how-card no-border ${item.class || ""}`;
-                card.innerHTML = `
-                  <img src="${item.image}" alt="${item.title}">
-                  <div class="card-overlay">
-                    <i class="fas fa-eye"></i>
-                    <span>${item.views || 0} izlenme</span>
-                  </div>
-                  <h3>${item.title}</h3>
-                  <p>${item.description}</p>
-                `;
-                filmContainer.appendChild(card);
-            });
+    const createMenu = (menuItems) => {
+        const menuList = document.getElementById('main-menu');
+        if (!menuList || !menuItems) return;
+        menuList.innerHTML = '';
+        menuItems.forEach(item => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = item.url;
+            a.textContent = item.text;
+            li.appendChild(a);
+            menuList.appendChild(li);
         });
+    };
 
-    fetch("json/soneklenen.json")
-        .then(res => res.json())
-        .then(filmItems => {
-            const filmContainer = document.getElementById("film-cards2");
-            filmItems.forEach(item => {
-                const card = document.createElement("div");
-                card.className = `soneklenen-card`;
-                card.innerHTML = `<img src="${item.image}" alt="${item.title}">`;
-                filmContainer.appendChild(card);
-            });
+    const createFeatureCards = (cards) => {
+        const container = document.getElementById('features-container');
+        if (!container || !cards) return;
+        container.innerHTML = '';
+        cards.forEach(card => {
+            const cardElement = document.createElement('div');
+            cardElement.classList.add('feature-card');
+            cardElement.innerHTML = `<i class="${card.icon}"></i><h3>${card.title}</h3><p>${card.description}</p>`;
+            container.appendChild(cardElement);
         });
+    };
 
-    fetch("json/rastgele-film.json")
-        .then(res => res.json()) //fetch ile yapılan ağ isteğinin ilk yanıtını işler. , Ayrıca Json nesnesine dönüştürme işlemi başlatır.
-        .then(movie => {
-            const container = document.getElementById("random-movie-container"); 
-            if (container) {
-                container.innerHTML = `
-                    <h2 class="section-title-center">Rastgele Film Önerisi</h2>
-                    <div class="suggestion-card">
-                        <img src="${movie.image}" alt="${movie.title} film afişi">
+    const createPosters = (movies) => {
+        const posterContainer = document.getElementById('poster-container');
+        if (!posterContainer || !movies) return;
+        posterContainer.innerHTML = '';
+        movies.forEach(movie => {
+            const posterLink = document.createElement('a');
+            posterLink.href = "#";
+            posterLink.classList.add('poster-item');
+            posterLink.innerHTML = `<img src="${movie.imgSrc}" alt="${movie.title}"><div class="poster-overlay"><i class="bi bi-eye-fill"></i><span class="view-count">${movie.views}</span></div>`;
+            posterContainer.appendChild(posterLink);
+        });
+    };
+
+    const createRecentLists = (lists) => {
+        const listContainer = document.getElementById('recent-lists-container');
+        if (!listContainer || !lists) return;
+        listContainer.innerHTML = '';
+        lists.forEach(list => {
+            const listCard = document.createElement('a');
+            listCard.href = "#";
+            listCard.classList.add('list-card');
+            const progressBarHtml = Array(4).fill(0).map((_, i) => `<span class="${i < 3 ? 'active' : ''}"></span>`).join('');
+            listCard.innerHTML = `<img src="${list.imgSrc}" alt="${list.title}"><div class="list-card-overlay"><div class="progress-bar">${progressBarHtml}</div><i class="bi bi-list-task"></i></div>`;
+            listContainer.appendChild(listCard);
+        });
+    };
+
+    const createPopularMembers = (members) => {
+        const membersContainer = document.getElementById('popular-members-container');
+        if (!membersContainer || !members) return;
+        membersContainer.innerHTML = '';
+        members.forEach(member => {
+            const memberCard = document.createElement('div');
+            memberCard.classList.add('member-card');
+            memberCard.innerHTML = `<div class="avatar-wrapper"><img src="${member.avatarSrc}" alt="${member.username}"></div><div class="member-info"><span class="username">${member.username}</span><span class="score">Puan: ${member.puan}</span><span class="stats">${member.izledi} izledi</span><span class="stats">${member.yorumladı} yorumladı</span></div>`;
+            membersContainer.appendChild(memberCard);
+        });
+    };
+
+    const createRandomSuggestion = (movie) => {
+        const container = document.getElementById('random-suggestion');
+        if (!container || !movie) return;
+        container.innerHTML = `<h2>Rastgele Film Önerisi</h2><a href="#" class="suggestion-card"><img src="${movie.imgSrc}" alt="${movie.title}"></a>`;
+    };
+
+    const createLatestComments = (comments) => {
+        const container = document.getElementById('latest-comments');
+        if (!container || !comments) return;
+        let commentsHtml = '<h2>Son Yorumlar</h2><div class="comments-list">';
+        comments.forEach(comment => {
+            commentsHtml += `
+                <div class="comment-item">
+                    <div class="comment-header">
+                        <span class="comment-user">${comment.username}</span>
+                        <span class="comment-movie-title">${comment.movieTitle}</span>
                     </div>
-                `;
+                    <p class="comment-body">${comment.comment}</p>
+                </div>
+            `;
+        });
+        commentsHtml += '</div>';
+        container.innerHTML = commentsHtml;
+    };
+    
+    const handleHeaderScroll = () => {
+        const header = document.querySelector('.site-header');
+        if (!header) return;
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
             }
-        })
-        .catch(error => console.error('Rastgele film yüklenirken hata:', error));
+        });
+    };
 
-    fetch("json/son-yorumlar.json")
-        .then(res => {
-            if (!res.ok) {
-                throw new Error(`HTTP error! status: ${res.status}`);
-            }
-            return res.json();
-        })
-        .then(comments => {
-            const container = document.getElementById("recent-comments-container");
-            if (container) {
-                let commentsHTML = '<h2 class="section-title-left">Son Yorumlar</h2><ul class="comments-list">';
+    const initApp = async () => {
+        handleHeaderScroll();
+        
+        const menuItems = await fetchData('json/menu.json', e => console.error("Menü Yüklenemedi:", e));
+        createMenu(menuItems);
 
-                comments.forEach(comment => {
-                    commentsHTML += `
-                        <li class="comment-item">
-                            <div class="comment-user-avatar">user</div>
-                            <div class="comment-content">
-                                <span class="comment-movie-title">${comment.movieTitle}</span>
-                                <p>${comment.commentText}</p>
-                            </div>
-                        </li>
-                    `;
-                });
+        const featureCards = await fetchData('json/hower.json', e => console.error("Özellik Kartları Yüklenemedi:", e));
+        createFeatureCards(featureCards);
 
-                commentsHTML += '</ul>';
-                container.innerHTML = commentsHTML;
-            }
-        })
-        .catch(error => console.error('Yorumlar yüklenirken hata:', error));
+        const movies = await fetchData('json/filmafis.json', e => console.error("Filmler Yüklenemedi:", e));
+        createPosters(movies);
+
+        const recentLists = await fetchData('json/sonlisteler.json', e => console.error("Listeler Yüklenemedi:", e));
+        createRecentLists(recentLists);
+
+        const popularMembers = await fetchData('json/populer-uyeler.json', e => console.error("Üyeler Yüklenemedi:", e));
+        createPopularMembers(popularMembers);
+
+        const randomMovie = await fetchData('json/rastgele-film.json', e => console.error("Rastgele Film Yüklenemedi:", e));
+        createRandomSuggestion(randomMovie);
+
+        const latestComments = await fetchData('json/son-yorumlar.json', e => console.error("Son Yorumlar Yüklenemedi:", e));
+        createLatestComments(latestComments);
+    };
+
+    initApp();
 });

@@ -1,44 +1,44 @@
 [
   {
-    "avatar": "img/fight-club-brad-pitt-1.jpg",
-    "username": "user",
-    "puan": 444,
-    "izledi": 83,
-    "yorumladı": 12
+   "avatarSrc":"img/td.jpg",
+   "username":"user",
+   "puan":421,
+   "izledi":75,
+  "yorumladı":10
   },
   {
-    "avatar":"img/fight-club-brad-pitt-1.jpg",
-    "username": "user",
-    "puan": 444,
-    "izledi": 83,
-    "yorumladı": 12
+     "avatarSrc":"img/td.jpg",
+   "username":"user",
+   "puan":421,
+   "izledi":75,
+  "yorumladı":10
   },
   {
-    "avatar": "img/fight-club-brad-pitt-1.jpg",
-    "username": "user",
-    "puan": 444,
-    "izledi": 83,
-    "yorumladı": 12
+     "avatarSrc":"img/td.jpg",
+   "username":"user",
+   "puan":421,
+   "izledi":75,
+  "yorumladı":10
   },
   {
-   "avatar": "img/fight-club-brad-pitt-1.jpg",
-    "username": "user",
-    "puan": 444,
-    "izledi": 83,
-    "yorumladı": 12
+    "avatarSrc":"img/td.jpg",
+   "username":"user",
+   "puan":421,
+   "izledi":75,
+  "yorumladı":10
   },
   {
-"avatar": "img/fight-club-brad-pitt-1.jpg",
-    "username": "user",
-    "puan": 444,
-    "izledi": 83,
-    "yorumladı": 12
+    "avatarSrc":"img/td.jpg",
+   "username":"user",
+   "puan":421,
+   "izledi":75,
+  "yorumladı":10
   },
   {
-   "avatar": "img/fight-club-brad-pitt-1.jpg",
-    "username": "user",
-    "puan": 444,
-    "izledi": 83,
-    "yorumladı": 12
+   "avatarSrc":"img/td.jpg",
+   "username":"user",
+   "puan":421,
+   "izledi":75,
+  "yorumladı":10
   }
 ]

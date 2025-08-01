@@ -1,38 +1,8 @@
 [
-  {
-    "title": "The Lord of the Rings",
-    "image": "img/lordofstheking.jpg",
-    "description": "Orta Dünya'da geçen destansı bir macera.",
-    "views": 45872
-  },
-  {
-    "title": "Matrix Revolutions",
-    "image": "img/matrix.jpg",
-    "description": "Gerçeklik ve sanal dünya arasındaki savaş.",
-    "views": 37456
-  },
-  {
-    "title": "The Revenant",
-    "image": "img/therevenant.jpg",
-    "description": "Hayatta kalma mücadelesi ve intikam hikayesi.",
-    "views": 22678
-  },
-  {
-    "title": "Interstellar",
-    "image": "img/theinterstellar.jpg",
-    "description": "Zaman ve uzay arasında bir yolculuk.",
-    "views": 51924
-  },
-  {
-    
-    "image": "img/thepianist.jpg",
-    "description": "Savaşın ortasında bir müzisyenin dramı.",
-    "views": 18890
-  },
-  {
-    "title": "American History X",
-    "image": "img/americanhistory.jpg",
-    "description": "Irkçılık ve kurtuluş üzerine çarpıcı bir film.",
-    "views": 31115
-  }
+  { "imgSrc": "img/lordofstheking.jpg", "title": "Lord of the Rings", "views": "2.1M" },
+  { "imgSrc": "img/matrix.jpg", "title": "The Matrix", "views": "1.8M" },
+  { "imgSrc": "img/therevenant.jpg", "title": "The Revenant", "views": "1.5M" },
+  { "imgSrc": "img/theinterstellar.jpg", "title": "Interstellar", "views": "2.5M" },
+  { "imgSrc": "img/thepianist.jpg", "title": "The Pianist", "views": "1.2M" },
+  { "imgSrc": "img/americanhistory.jpg", "title": "American History X", "views": "1.7M" }
 ]
