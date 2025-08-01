@@ -2,5 +2,6 @@
   { "text": "filmler", "url": "#filmler" },
   { "text": "diziler", "url": "#diziler" },
   { "text": "yorumlar", "url": "#yorumlar" },
-  { "text": "listeler", "url": "#listeler" }
-]
+  { "text": "listeler", "url": "#listeler" },
+  { "text": "türler","url": "#turler" }
+] 
