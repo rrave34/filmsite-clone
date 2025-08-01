@@ -175,7 +175,7 @@ body {
 
 .feature-card i {
     font-size: 32px;
-    color:#9ca3af;
+    color: #9ca3af;
     margin-bottom: 15px;
     transition: color 0.3s ease;
 }
@@ -305,6 +305,7 @@ list-row {
     border-radius: 4px;
 }
 
+
 .list-card {
     position: relative;
     display: block;
@@ -326,25 +327,21 @@ list-row {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 105%;
-    height: 102%;
+    width: 100%;
+    height: 100%;
     padding: 10px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    flex-direction: column;
 }
-
-
 
 .menusn img {
     margin-top: -15px;
     height: 35px;
     width: 45px;
 }
-
-
-
 
 
 .members-row {
@@ -372,20 +369,18 @@ list-row {
     height: 110px;
     border-radius: 50%;
     padding: 5px;
-    background: conic-gradient(
-        from 90deg,
-        var(--accent-turquoise) 0%, var(--accent-turquoise) 8%, transparent 8%, transparent 10%,
-        var(--accent-turquoise) 10%, var(--accent-turquoise) 18%, transparent 18%, transparent 20%,
-        var(--accent-turquoise) 20%, var(--accent-turquoise) 28%, transparent 28%, transparent 30%,
-        var(--accent-turquoise) 30%, var(--accent-turquoise) 38%, transparent 38%, transparent 40%,
-        var(--accent-turquoise) 40%, var(--accent-turquoise) 48%, transparent 48%, transparent 50%,
-        var(--accent-turquoise) 50%, var(--accent-turquoise) 58%, transparent 58%, transparent 60%,
-        var(--accent-turquoise) 60%, var(--accent-turquoise) 68%, transparent 68%, transparent 70%,
-        var(--accent-turquoise) 70%, var(--accent-turquoise) 78%, transparent 78%, transparent 80%,
-        var(--accent-turquoise) 80%, var(--accent-turquoise) 88%, transparent 88%, transparent 90%,
-        var(--accent-turquoise) 90%, var(--accent-turquoise) 98%, transparent 98%, transparent 100%
-    );
-   
+    background: conic-gradient(from 90deg,
+            var(--accent-turquoise) 0%, var(--accent-turquoise) 8%, transparent 8%, transparent 10%,
+            var(--accent-turquoise) 10%, var(--accent-turquoise) 18%, transparent 18%, transparent 20%,
+            var(--accent-turquoise) 20%, var(--accent-turquoise) 28%, transparent 28%, transparent 30%,
+            var(--accent-turquoise) 30%, var(--accent-turquoise) 38%, transparent 38%, transparent 40%,
+            var(--accent-turquoise) 40%, var(--accent-turquoise) 48%, transparent 48%, transparent 50%,
+            var(--accent-turquoise) 50%, var(--accent-turquoise) 58%, transparent 58%, transparent 60%,
+            var(--accent-turquoise) 60%, var(--accent-turquoise) 68%, transparent 68%, transparent 70%,
+            var(--accent-turquoise) 70%, var(--accent-turquoise) 78%, transparent 78%, transparent 80%,
+            var(--accent-turquoise) 80%, var(--accent-turquoise) 88%, transparent 88%, transparent 90%,
+            var(--accent-turquoise) 90%, var(--accent-turquoise) 98%, transparent 98%, transparent 100%);
+
 }
 
 
@@ -414,9 +409,10 @@ list-row {
 
 .member-info .score {
     font-size: 13px;
+    font-weight: bold;
     margin-bottom: 5px;
-     color: var(--bg-card) ;
-    background-color:#9ca3af ;
+    color: var(--bg-card);
+    background-color: #9ca3af;
 }
 
 .member-info .stats {
@@ -429,7 +425,9 @@ list-row {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 60px;
+    padding-left: 480px;
     align-items: flex-start;
+
 }
 
 #random-suggestion h2,
@@ -442,6 +440,7 @@ list-row {
 .suggestion-card img {
     width: 100%;
     max-width: 300px;
+    margin-left: -60px;
     height: auto;
     border: 9px solid var(--text-white);
     border-radius: 8px;
@@ -451,15 +450,15 @@ list-row {
 
 
 .comments-list {
-   padding-right: 165px;
+    padding-right: 165px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-   
+
 }
 
 .comment-item {
-    
+
     border-bottom: 1px solid var(--border-card);
     padding-bottom: 15px;
 }
@@ -470,12 +469,12 @@ list-row {
 
 .comment-header {
     display: flex;
-   align-items: center;
+    align-items: center;
     gap: 10px;
     margin-bottom: 8px;
 }
 
-.comment-user{
+.comment-user {
     background-color: var(--bg-card);
     padding: 8px;
     border-radius: 4px;
@@ -483,15 +482,45 @@ list-row {
     font-weight: bold;
 }
 
-.comment-movie-title{
+.comment-movie-title {
     font-size: 14px;
     color: var(--text-secondary);
 }
 
-.comment-body{
-    font-size:15px;
+.comment-body {
+    font-size: 15px;
+    margin-right: 15px;
     line-height: 1.6;
     margin: 0;
     color: var(--text-primary);
     margin-right: 75px;
 }
+
+.site-footer {
+    background-color: var(--bg-primary);
+    padding: 40px 0;
+    border-top: 1px solid var(--border-card);
+}
+
+.site-footer .container {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-logo span {
+    display: block;
+    height: 7px;
+    width: 35px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+}
+
+.footer-logo span:nth-child(1) {
+    background-color: var(--text-white);
+}
+
+.footer-logo span:nth-child(2) {
+    background-color: var(--brand-green);
+}
+
