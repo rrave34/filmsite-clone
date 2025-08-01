@@ -105,6 +105,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    const handleMobileMenu = () => {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const headerRight = document.querySelector('.header-right');
+
+        if (!menuToggle || !headerRight) return;
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('is-active');
+            headerRight.classList.toggle('menu-open');
+        });
+    };
+
     const initApp = async () => {
         const menuItems = await fetchData('json/menu.json', e => console.error("Menü Yüklenemedi:", e));
         createMenu(menuItems);
@@ -128,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         createLatestComments(latestComments);
 
         handleHeaderScroll();
+        handleMobileMenu();
     };
 
     initApp();

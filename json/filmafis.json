@@ -1,8 +1,8 @@
 [
-  { "imgSrc": "img/lordofstheking.jpg", "title": "Lord of the Rings", "views": "2.1M" },
-  { "imgSrc": "img/matrix.jpg", "title": "The Matrix", "views": "1.8M" },
-  { "imgSrc": "img/therevenant.jpg", "title": "The Revenant", "views": "1.5M" },
-  { "imgSrc": "img/theinterstellar.jpg", "title": "Interstellar", "views": "2.5M" },
-  { "imgSrc": "img/thepianist.jpg", "title": "The Pianist", "views": "1.2M" },
-  { "imgSrc": "img/americanhistory.jpg", "title": "American History X", "views": "1.7M" }
+  { "imgSrc": "img/lordofstheking.jpg", "title": "Lord of the Rings", "views": "1.325.248" },
+  { "imgSrc": "img/matrix.jpg", "title": "The Matrix", "views": "1.325.248" },
+  { "imgSrc": "img/therevenant.jpg", "title": "The Revenant", "views": "1.325.248" },
+  { "imgSrc": "img/theinterstellar.jpg", "title": "Interstellar", "views": "1.325.248" },
+  { "imgSrc": "img/thepianist.jpg", "title": "The Pianist", "views": "1.325.248" },
+  { "imgSrc": "img/americanhistory.jpg", "title": "American History X", "views": "198.718" }
 ]

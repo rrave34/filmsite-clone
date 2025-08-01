@@ -33,7 +33,7 @@ body, html {
 }
 
 .hero-section {
-    height: 95vh;
+    height: 100vh;
     background-image: url('img/1.jpg');
     background-size: cover;
     background-position: center;
@@ -148,6 +148,7 @@ body, html {
     font-size: 24px;
     margin-top: 0;
     margin-bottom: 30px;
+   
 }
 
 .features-grid {
@@ -292,7 +293,6 @@ body, html {
 
 }
 
-
 .avatar-wrapper img {
     width: 100%;
     height: 100%;
@@ -300,7 +300,6 @@ body, html {
     border: 2px solid var(--bg-primary);
     object-fit: cover;
 }
-
 
 .member-info {
     text-align: center;
@@ -334,7 +333,8 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 60px;
+    gap: 590px;
+    
 }
 
 #random-suggestion {
@@ -350,37 +350,37 @@ body, html {
     border: 9px solid var(--text-white);
     border-radius: 8px;
     transition: transform 0.3s ease;
-}
-
-.suggestion-card:hover img {
-    transform: scale(1.03);
+    margin-left:  275px; ;
 }
 
 .comments-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
 }
 
 .comment-item {
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 15px;
+    padding-bottom: 25px;
 }
 
 .comment-item:last-child {
     border-bottom: none;
+    padding-bottom: 0;
 }
 
 .comment-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
 }
 
 .comment-user {
-    background-color: var(--bg-card);
-    padding: 8px;
+    background-color: #374151;
+    color: var(--text-primary);
+    padding: 4px 10px;
     border-radius: 4px;
     font-size: 13px;
     font-weight: bold;
@@ -388,14 +388,15 @@ body, html {
 
 .comment-movie-title {
     font-size: 14px;
+    font-weight: bold;
     color: var(--text-secondary);
 }
 
 .comment-body {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6;
     margin: 0;
-     margin-left: 150px;
+    color: var(--text-primary);
 }
 
 .site-footer {
@@ -432,50 +433,13 @@ body, html {
     color: var(--text-secondary);
 }
 
-
-@media (max-width: 900px) {
-    .header-right {
-        display: none;
-    }
-    .site-header .container {
-        justify-content: flex-start;
-    }
-    .suggestions-comments-wrapper {
-        flex-direction: column;
-        gap: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .members-row {
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding-bottom: 20px;
-    }
-    .member-card:last-child {
-        border-right: 1px solid var(--border-color);
-    }
-}
-
-@media (max-width: 576px) {
-    .site-footer .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .footer-logo {
-        margin-bottom: 20px;
-    }
-}
-
-/* --- MOBİL MENÜ STİLLERİ --- */
-
 .mobile-menu-toggle {
-    display: none; /* Masaüstünde gizli */
+    display: none;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 1001; /* Menünün üstünde kalması için */
+    z-index: 1001;
     width: 30px;
     height: 24px;
     flex-direction: column;
@@ -491,7 +455,6 @@ body, html {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Menü açıkken hamburger ikonunu "X" ikonuna dönüştürme */
 .mobile-menu-toggle.is-active span:nth-child(1) {
     transform: translateY(10.5px) rotate(45deg);
 }
@@ -503,41 +466,34 @@ body, html {
 .mobile-menu-toggle.is-active span:nth-child(3) {
     transform: translateY(-10.5px) rotate(-45deg);
 }
-
-
-/* --- RESPONSIVE DÜZENLEMELERİ --- */
-
 @media (max-width: 900px) {
+
     .mobile-menu-toggle {
-        display: flex; /* Mobilde hamburger ikonunu göster */
+        display: flex;
     }
 
+
     .site-header .container {
-        /* Logo ve hamburger ikonu arasını açmak için zaten space-between vardı,
-           eğer flex-start ise bunu space-between yapın. Mevcut kodda flex-start'a dönüyordu,
-           bu yüzden bu kuralı ekliyoruz. */
         justify-content: space-between;
     }
 
-    /* Mevcut .header-right kuralını güncelliyoruz */
+
     .header-right {
-        display: flex; /* display:none yerine flex kullanıyoruz */
+        display: flex; 
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh; /* Tam ekran kaplasın */
+        height: 100vh;
         background-color: var(--bg-primary);
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 50px;
-       
-        transform: translateX(100%);
+        transform: translateX(100%); 
         transition: transform 0.4s ease-in-out;
     }
 
-    
     .header-right.menu-open {
         transform: translateX(0);
     }
@@ -560,3 +516,38 @@ body, html {
     .auth-links a {
         font-size: 20px;
     }
+    .suggestions-comments-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    
+    .members-row {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 20px;
+    }
+    .member-card {
+       flex-shrink: 0;
+    }
+    .member-card:last-child {
+        border-right: 1px solid var(--border-color);
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    /* Footer elemanlarını alt alta diz */
+    .site-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+}
