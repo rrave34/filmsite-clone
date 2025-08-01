@@ -532,35 +532,31 @@ body, html {
         justify-content: center;
         align-items: center;
         gap: 50px;
-        /* Başlangıçta ekranın sağında gizli dursun */
+       
         transform: translateX(100%);
         transition: transform 0.4s ease-in-out;
     }
 
-    /* Menü açıldığında ekranın içine gelsin */
+    
     .header-right.menu-open {
         transform: translateX(0);
     }
 
     .main-nav ul {
-        flex-direction: column; /* Linkleri dikey sırala */
+        flex-direction: column; 
         text-align: center;
         gap: 30px;
     }
     
     .main-nav a {
-        font-size: 24px; /* Mobilde yazı boyutunu büyütelim */
+        font-size: 24px; 
     }
 
     .auth-links {
-        flex-direction: column; /* Giriş/kaydol linklerini dikey sırala */
-        text-align: center;
+        flex-direction: column; 
         gap: 20px;
     }
 
     .auth-links a {
         font-size: 20px;
     }
-
-    /* Diğer responsive kurallarınız burada kalabilir */
-}
